@@ -57,9 +57,11 @@ int OSK::initOskDataEx(SceUtilityOskParams* oskParams, int idx,
        return 0;
 
     memset(&oskParams->data[idx], 0, sizeof(SceUtilityOskData));
-    oskParams->data[idx].language = PSP_UTILITY_OSK_LANGUAGE_DEFAULT;
+    oskParams->data[idx].unk_00 = 0;
+    oskParams->data[idx].unk_04 = 0;
+    oskParams->data[idx].language = 0;
     oskParams->data[idx].inputtype = 13;
-    oskParams->data[idx].lines = linesNumber;
+    oskParams->data[idx].lines = 1;
     oskParams->data[idx].unk_24 = 0;                // set to 1
     oskParams->data[idx].desc = desc;
     oskParams->data[idx].intext = intext;
