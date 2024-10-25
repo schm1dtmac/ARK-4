@@ -1,4 +1,5 @@
 #include <pspkernel.h>
+#include <pspsdk.h>
 #include <kubridge.h>
 #include <vector>
 #include <sstream>
