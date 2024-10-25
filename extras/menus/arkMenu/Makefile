@@ -7,7 +7,7 @@ CFLAGS += -DDEBUG=$(DEBUG)
 endif
 INCDIR = include include/anim include/multimedia include/ftp $(ARKROOT)/libs/libya2d $(ARKROOT)/libs/libintraFont $(ARKROOT)/libs/libjpeg $(ARKROOT)/common/include
 LIBDIR = $(ARKROOT)/libs
-LDFLAGS =
+LDFLAGS = -L sysmem
 EXTRA_TARGETS = EBOOT.PBP
 PSP_EBOOT_TITLE = arkMenu
 PSP_EBOOT_ICON = ICON0.PNG
@@ -102,7 +102,6 @@ LIBS = \
 		-lpspusbdevice_driver \
 		-lpspsystemctrl_user \
 		-lpspkubridge \
-		-lsysmem \
 
 all: $(TARGET).prx
 	$(Q)python3 ./pkg.py
