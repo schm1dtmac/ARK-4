@@ -38,6 +38,8 @@ int main(int argc, char** argv){
 
     srand(time(NULL));
 
+    sceKernelSetCompiledSdkVersion(0x06060010);
+
     int encoding = 5;
     sceIoDevctl("fatms0:", 0x02425856, &encoding, 4, NULL, 0);
     //sceIoDevctl("fatef0:", 0x02425856, &encoding, 4, NULL, 0);
