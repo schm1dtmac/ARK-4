@@ -7,6 +7,7 @@ STUB_FUNC 0x2B7C7CF4, scePowerRequestStandby
 STUB_FUNC 0x0442D852, scePowerRequestColdReset
 STUB_FUNC 0xAC32C9CC, scePowerRequestSuspend
 STUB_END
+
 STUB_START "SysMemUserForUser",0x40090000,0x00010005
 STUB_FUNC  0x7591C7DB,sceKernelSetCompiledSdkVersion
 STUB_END
