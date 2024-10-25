@@ -64,9 +64,9 @@ int OSK::initOskDataEx(SceUtilityOskParams* oskParams, int idx,
     oskParams->data[idx].lines = 1;
     oskParams->data[idx].unk_24 = 0;                // set to 1
     oskParams->data[idx].desc = desc;
-    oskParams->data[idx].intext = intext;
-    oskParams->data[idx].outtextlength = textLimit;
-    oskParams->data[idx].outtextlimit = textLimit;
+    oskParams->data[idx].intext = NULL;
+    oskParams->data[idx].outtextlength = 32;
+    oskParams->data[idx].outtextlimit = 10;
     oskParams->data[idx].outtext = outtext;
 
     return 1;
