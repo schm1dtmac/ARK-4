@@ -31,7 +31,7 @@ static SystemEntry* entries[MAX_ENTRIES];
 
 extern "C" void my_malloc_init();
 
-int sceKernelSetCompiledSdkVersion(int sdkversion);
+extern int sceKernelSetCompiledSdkVersion(int sdkversion);
 
 int main(int argc, char** argv){
 
