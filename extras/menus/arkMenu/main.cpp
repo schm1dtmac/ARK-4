@@ -1,5 +1,4 @@
 #include <pspkernel.h>
-#include <pspsdk.h>
 #include <kubridge.h>
 #include <vector>
 #include <sstream>
@@ -32,7 +31,7 @@ static SystemEntry* entries[MAX_ENTRIES];
 
 extern "C" void my_malloc_init();
 
-extern int sceKernelSetCompiledSdkVersion(int sdkversion);
+extern "C" int sceKernelSetCompiledSdkVersion(int sdkversion);
 
 int main(int argc, char** argv){
 
