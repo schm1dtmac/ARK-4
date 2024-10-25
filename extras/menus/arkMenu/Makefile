@@ -5,9 +5,9 @@ ASFLAGS = $(CFLAGS)
 ifdef DEBUG
 CFLAGS += -DDEBUG=$(DEBUG)
 endif
-INCDIR = $(PSPSDK)/include include include/anim include/multimedia include/ftp $(ARKROOT)/libs/libya2d $(ARKROOT)/libs/libintraFont $(ARKROOT)/libs/libjpeg $(ARKROOT)/common/include
+INCDIR = include include/anim include/multimedia include/ftp $(ARKROOT)/libs/libya2d $(ARKROOT)/libs/libintraFont $(ARKROOT)/libs/libjpeg $(ARKROOT)/common/include
 LIBDIR = $(ARKROOT)/libs
-LDFLAGS = -L sysmem
+LDFLAGS = 
 EXTRA_TARGETS = EBOOT.PBP
 PSP_EBOOT_TITLE = arkMenu
 PSP_EBOOT_ICON = ICON0.PNG
