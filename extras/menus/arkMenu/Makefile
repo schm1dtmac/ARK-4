@@ -102,6 +102,7 @@ LIBS = \
 		-lpspusbdevice_driver \
 		-lpspsystemctrl_user \
 		-lpspkubridge \
+		-lsysmem \
 
 all: $(TARGET).prx
 	$(Q)python3 ./pkg.py
