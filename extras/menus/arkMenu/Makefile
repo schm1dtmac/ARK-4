@@ -5,7 +5,7 @@ ASFLAGS = $(CFLAGS)
 ifdef DEBUG
 CFLAGS += -DDEBUG=$(DEBUG)
 endif
-INCDIR = include include/anim include/multimedia include/ftp $(ARKROOT)/libs/libya2d $(ARKROOT)/libs/libintraFont $(ARKROOT)/libs/libjpeg $(ARKROOT)/common/include
+INCDIR = $(PSPSDK)/include include include/anim include/multimedia include/ftp $(ARKROOT)/libs/libya2d $(ARKROOT)/libs/libintraFont $(ARKROOT)/libs/libjpeg $(ARKROOT)/common/include
 LIBDIR = $(ARKROOT)/libs
 LDFLAGS = -L sysmem
 EXTRA_TARGETS = EBOOT.PBP
