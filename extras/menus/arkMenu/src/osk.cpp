@@ -24,7 +24,7 @@ SceUtilityOskParams* OSK::initOskEx(int nData, int language)
     if (!oskParams)  return NULL;
     memset(oskParams, 0, sizeof(SceUtilityOskParams));
 
-    oskParams->base.size = sizeof(SceUtilityOskParams);
+    oskParams->base.size = 64;
     if (language >= 0)
        oskParams->base.language = language;
     else
@@ -35,7 +35,9 @@ SceUtilityOskParams* OSK::initOskEx(int nData, int language)
     oskParams->base.fontThread = 18;
     oskParams->base.soundThread = 16;
     oskParams->base.buttonSwap = !(int)common::getConf()->swap_buttons;
-    oskParams->datacount = (1>nData)? 1: nData;
+    oskParams->datacount = 1;
+    oskParams->state = 0;
+    oskParams->unk_60 = 0;
     oskParams->data = (SceUtilityOskData*) malloc(oskParams->datacount * sizeof(SceUtilityOskData));
     if (!oskParams->data) {
        free(oskParams);
