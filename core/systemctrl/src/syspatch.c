@@ -155,7 +155,7 @@ static void ARKSyspatchOnModuleStart(SceModule2 * mod)
     }
 
     // unlocks variable bitrate, qwerty board, and WPA on old homebrew
-    if (strcmp(mod->modname, "sceMp3_Library") == 0 || strcmp(mod->modname, "sceVshOSK_Module") == 0 || strcmp(mod->modname, "sceNetApctl_Library") == 0){
+    if (strcmp(mod->modname, "sceMp3_Library") == 0 || strcmp(mod->modname, "sceVshOSK_Module") == 0){
         hookImportByNID(mod, "SysMemUserForUser", 0xFC114573, &sctrlHENFakeDevkitVersion);
         goto flush;
     }
@@ -224,9 +224,9 @@ static void ARKSyspatchOnModuleStart(SceModule2 * mod)
             goto flush;
         }
     }
-    
-    // No need to flush
-    goto exit;
+	
+    //very bad idea!
+    hookImportByNID(mod, "SysMemUserForUser", 0xFC114573, &sctrlHENFakeDevkitVersion);
     
 flush:
     // Flush Cache
